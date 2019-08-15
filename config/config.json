@@ -5,7 +5,10 @@
         "app_desc": "",
         "node_port": 3000,
         "json_indentation": 4,
-        "database": ""
+        "database": "",
+        "dbuser": "root",
+        "dbpass": "Mysql1234",
+        "dbhost": "localhost"
     },
     "testing": {
         "config_id": "testing",

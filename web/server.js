@@ -7,4 +7,4 @@ module.exports = function (app) {
 
         console.log("App listening at http://%s:%s", 'localhost', port);
     });
-}
+};

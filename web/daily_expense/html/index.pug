@@ -1,0 +1,30 @@
+html
+  head
+    title= title
+    link(rel='stylesheet' href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    script(src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js')
+  body
+    .mdc-data-table
+      table.mdc-data-table__table
+        thead: tr
+          mixin tableHeader(name)
+            th.mdc-data-table__header-cell(role='columnheader' scope='col')= name
+          +tableHeader('ID')
+          +tableHeader('Date')
+          +tableHeader('Category')
+          +tableHeader('Withdrawl')
+          +tableHeader('Deposit')
+          +tableHeader('Balance')
+        tbody.mdc-data-table__content
+          mixin column(value)
+            td.mdc-data-table__cell(class=attributes.class)= value
+          mixin record()
+            tr.mdc-data-table__row
+              +column('123')(class='mdc-data-table__cell--numeric')
+              +column('2019-01-01')
+              +column('category')
+              +column('123')
+              +column('223')
+              +column('231')
+          +record()
